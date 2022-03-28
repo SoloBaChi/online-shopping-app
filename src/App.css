@@ -1,0 +1,68 @@
+/*Default styles*/
+html{
+  box-sizing:border-box;
+}
+*,*::before,*::after{
+  box-sizing:inherit;
+}
+body{
+padding:0;
+border:0;
+}
+
+/*Home Page Styles*/
+.home-wrapper{
+  border:0px solid red;
+  background:#000;
+}
+.home-wrapper .row{
+  border: 0px solid green;
+  display:flex;
+  flex-flow:column wrap;
+  align-items:center;
+}
+.home-wrapper .row p span{
+display:block;
+font-size:1.3rem;
+color:#fff;
+}
+.home-wrapper .row p span:nth-child(3n+1){
+  color:#3BA9C3;
+}
+.home-wrapper .row p span:nth-child(2n+3){
+  color:#1AA462;
+}
+.home-wrapper .row button{
+  border:2px solid #fff;
+/*  box-shadow:none;
+*/  
+width:150px;
+padding:0.5rem;
+border-radius:0.3rem;
+background:#1AA462;
+margin:1rem 0 1rem 0;
+position:relative;
+top:-4rem;
+left:-0.5rem;
+}
+.home-wrapper .row button a{
+  text-decoration:none;
+  color:#fff;
+  font-size:1rem;
+}
+
+
+/*Header Styles*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer styles*/
