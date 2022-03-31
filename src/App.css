@@ -1,4 +1,29 @@
-/*Default styles*/
+/*Generic styles*/
+:root{
+      --color1:#001219;
+      --color2:#005f73;
+      --color3:#3d9397;
+      --color4:#94d28d;
+      --color5:#e9d8a6;
+      --color6:#ee9800;
+      --color7:#ca6702;
+      --color8:#bb3e03;
+      --color9:#ae2012;
+      --color10:#9b2226;
+      --black:#171321;
+      --dkblue: #0d314b;
+       --plum: #4b0d49;
+       --hotmag: #ff17e4;
+      --magenta: #e310cb;
+        --aqua: #86fbfb;
+      --white: #f7f8fa;
+      --font-size: 1.3rem;
+     --mono: 'Oxygen Mono', monospace;
+     --sans: 'Oxygen', sans-serif;
+    --orange:#FF7400;
+    --lightpink:#FF0DFF;
+    }
+
 html{
   box-sizing:border-box;
 }
@@ -9,6 +34,16 @@ body{
 padding:0;
 border:0;
 }
+h1,h2,h3{
+  margin:0;
+}
+/*img{
+  width:50%;
+}*/
+
+
+
+/*End of Generic styles*/
 
 /*Home Page Styles*/
 .home-wrapper{
@@ -53,16 +88,106 @@ left:-0.5rem;
 
 
 /*Header Styles*/
+.header-wrapper{
+  background-color:var(--color5);
+}
+.nav-section nav{
+  max-width:1200px;
+  margin:0 auto;
+  padding:1rem;
+}
+.nav-section nav ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:flex-start;
+  gap:1rem;
+/*  background-color:red;
+*/}
+.nav-section nav ul a{
+text-decoration:none;
+display:block;
+font-size:1.2rem;
+padding:0.7rem;
+background-color:var(--color10);
+color:var(--white);
+border-radius:5px;
+text-align:center;
+}
+.nav-section nav ul li:first-child a{
+  border:2px solid yellow;
+  background-color:transparent;
+  color:slategrey;
+}
+.nav-section nav ul li:first-child{
+  flex-basis:100%;
+}
+.nav-section nav ul li{
+  flex-basis:50%;
+  margin:0 auto;
+}
 
-
-
-
-
-
-
-
-
-
+.nav-section nav ul a:hover{
+color:var(--color6);
+background-color:var(--color1);
+}
 
 
 /*Footer styles*/
+.footer-section{
+  text-align:center;
+}
+.footer-section ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  /*columns:2;
+*/
+ display:flex;
+ flex-flow:row wrap;
+ gap:2rem;
+}
+.footer-section ul a{
+  text-decoration:none;
+}
+
+
+/*Media Queries for different screen sizes*/
+/*For Tablet device*/
+@media(min-width:410px){
+  /*Header styles for tablet devices*/
+
+.nav-section nav ul li{
+  flex-basis:40%;
+  margin:0 auto;
+}
+}
+
+
+
+
+/*For desktop device*/
+@media(min-width:720px){
+
+  /*Header styles for desktop device*/
+ .nav-section nav ul{
+  justify-content:flex-start;
+ } 
+.nav-section nav ul a{
+  background-color:transparent;
+  color:var(--color2);
+}
+.nav-section nav ul a:hover{
+background-color:transparent;
+}
+.nav-section nav ul li{
+  flex-basis:auto;
+  margin:0;
+}
+.nav-section nav ul li:first-child{
+  flex-basis:auto;
+  margin-right:auto;
+}
+}
