@@ -110,14 +110,14 @@ left:-0.5rem;
 text-decoration:none;
 display:block;
 font-size:1.2rem;
-padding:0.7rem;
-background-color:var(--color10);
-color:var(--white);
+padding:0.6rem;
+color:var(--color6);
+background-color:var(--color1);
 border-radius:5px;
 text-align:center;
 }
 .nav-section nav ul li:first-child a{
-  border:2px solid yellow;
+  border:0px solid yellow;
   background-color:transparent;
   color:slategrey;
 }
@@ -129,9 +129,86 @@ text-align:center;
   margin:0 auto;
 }
 
-.nav-section nav ul a:hover{
-color:var(--color6);
-background-color:var(--color1);
+
+
+/*HomePage...SR-ONLY*/
+.sr-only{
+  display:none;
+  position:absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  padding:0;
+  border:none;
+  clip:rect(0,0,0,0);
+  overflow:hidden;
+}
+.menu-toggle{
+  display:inline-block;
+}
+.menu-toggle,.menu-close{
+  font-size:1.3rem;
+  color:#333;
+  padding:0.75px 15px;
+  line-height:1.5;
+}
+
+.menu-toggle:hover{
+ color:#c00;
+}
+/*HomePageStyles...off-canvas style*/
+.navbar-menu{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  height:100%;
+  overflow-x:visible;
+  overflow-y:visible;
+  transform:translateY(-100%);
+  transition:transform 0.9s ease;
+  z-index:1000;
+  background:orange;
+  opacity:0.95;
+}
+.navbar-menu ul{
+  padding:0;
+  height:100%;
+  width:300px;
+}
+.navbar-menu .menu-close{
+ position:absolute;
+ top:0;
+ right:0;
+ color:#fff;
+ border:0px solid yellow;
+}
+
+#navbar-menu:target{
+  transform:translateX(0);
+}
+#navbar-menu:target ul{
+  position:relative;
+}
+#navbar-menu:target .menu-close{
+  z-index:1001;
+}
+#navbar-menu:target + .backdrop{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index:998;
+  background:rgb(0,0,0,0.8);
+  cursor:default;
+}
+
+@supports(position:fixed){
+  .navbar-menu, #navbar-menu:target + .backdrop{
+    position:fixed;
+  }
 }
 
 
@@ -157,11 +234,39 @@ background-color:var(--color1);
 /*Media Queries for different screen sizes*/
 /*For Tablet device*/
 @media(min-width:410px){
-  /*Header styles for tablet devices*/
-
+/*Header styles for tablet devices*/
 .nav-section nav ul li{
   flex-basis:40%;
   margin:0 auto;
+}
+.nav-section nav ul a{
+  background: var(--color10);
+  color:#fff;
+}
+.nav-section nav ul a:hover{
+color:var(--color6);
+background-color:var(--color1);
+}
+.navbar-menu,.menu-close,.menu-toggle{
+  display:none;
+}
+/*turn-off canvas*/
+.navbar-menu{
+  position:static;
+  display:block;
+  top:auto;
+  left:auto;
+  transform:translateX(0);
+  background:none;
+  height:auto;
+}
+.navbar-menu ul{
+  padding:0;
+  height:auto;
+  width:auto;
+}
+#navbar-menu:target + .backdrop{
+  background:none;
 }
 }
 
@@ -171,7 +276,7 @@ background-color:var(--color1);
 /*For desktop device*/
 @media(min-width:720px){
 
-  /*Header styles for desktop device*/
+/*Header styles for desktop device*/
  .nav-section nav ul{
   justify-content:flex-start;
  } 

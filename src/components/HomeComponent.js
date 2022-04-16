@@ -1,4 +1,5 @@
 import React from 'react';
+import StartButton from './StartButton';
 
 function Home(props){
 	//console.log(props.image)
@@ -22,7 +23,7 @@ function Home(props){
 		    width="200px"/>
 		  </section>
 		  <section className="row">
-		   <button ><a href="#">Start Shopping &#8594;</a></button>
+		   <StartButton/>
 		  </section>
 
 		</div>
