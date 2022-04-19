@@ -18,11 +18,11 @@ const Header = () => {
 		   </a>
 		     <ul>
 		      <li><h1><a href="#">Site Logo</a></h1></li>
-              <li><a href="/">Home</a></li>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/cart">Cart</a></li>
-              <li><a href="/products">Products</a></li>
-              <li><a href="/aboutus">Aboutus</a></li>
+              <li><NavLink href="/">Home</NavLink></li>
+              <li><NavLink href="/login">Login</NavLink></li>
+              <li><NavLink href="/cart">Cart</NavLink></li>
+              <li><NavLink href="/products">Products</NavLink></li>
+              <li><NavLink href="/aboutus">Aboutus</NavLink></li>
 		     </ul>
 		   </nav>
 		   <a href="#navbar-toggle" className="backdrop" hidden aria-hidden="true" tabIndex="-1"></a>
