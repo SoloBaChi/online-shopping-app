@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 require('../login.css');
 
 export default function UserLogin(propd){
@@ -14,7 +15,7 @@ export default function UserLogin(propd){
 		  type="password"
 		  />
 		  <button type="submit">Login</button>
-		  <p>Don't have an account yet click <a href="/signup"> here to signup</a></p>
+		  <p>Don't have an account yet click <NavLink to="/signup"> here to signup</NavLink></p>
 		 </form>
 		</div>
 		);

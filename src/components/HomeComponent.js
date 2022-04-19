@@ -2,7 +2,7 @@ import React from 'react';
 import Typical from 'react-typical';
 import StartButton from './StartButton';
 
-function Home(props){
+function Home({image}){
 	//console.log(props.image)
 
 	return(
@@ -29,7 +29,7 @@ function Home(props){
 		  <section className="row">
 		   <img 
 		   className="home-image"
-		    src={props.image} 
+		    src={image} 
 		   alt="girl putting on headset"
 		    height="300px"
 		    width="200px"/>
