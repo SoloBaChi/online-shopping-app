@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = () => {
@@ -18,10 +18,11 @@ const Header = () => {
 		   </a>
 		     <ul>
 		      <li><h1><a href="#">Site Logo</a></h1></li>
-              <li><Link to="/">Home</Link></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Cart</a></li>
-              <li><a href="#">Aboutus</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/cart">Cart</a></li>
+              <li><a href="/products">Products</a></li>
+              <li><a href="/aboutus">Aboutus</a></li>
 		     </ul>
 		   </nav>
 		   <a href="#navbar-toggle" className="backdrop" hidden aria-hidden="true" tabIndex="-1"></a>

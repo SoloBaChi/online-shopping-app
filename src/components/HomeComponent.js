@@ -1,4 +1,5 @@
 import React from 'react';
+import Typical from 'react-typical';
 import StartButton from './StartButton';
 
 function Home(props){
@@ -6,7 +7,18 @@ function Home(props){
 
 	return(
 		<div className="home-wrapper">
-		  <section className="row">
+        <section className="row">
+         {" "}
+		 <h1 className="show-typical">
+        <Typical
+        loop={Infinity}
+        steps={[
+          "Welcome to our Shop...",2000,
+          "Place Your Order Now...",2000,
+          "and Get Your Delivery Fast.",2000,
+        	]}
+        />
+        </h1>
 		  <p>
 		  <span>Experience</span>
 		  <span>Purest Sound with Our</span>

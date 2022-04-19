@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -6,12 +7,12 @@ const Footer = () => {
 		<div className="footer-wrapper">
 		 <footer className="footer-section">
 		  <ul>
-		    <li><a href="#">shhs</a></li>
-		    <li><a href="#">ssn</a></li>
-		    <li><a href="#">sn</a></li>
-		    <li><a href="#">sjnsj</a></li>
+		    <li><NavLink to="/">Home</NavLink></li>
+		    <li><NavLink to="/aboutus">About Us</NavLink></li>
+		    <li><NavLink to="#">Contact Us</NavLink></li>
+		    <li><NavLink to="#">FAQ</NavLink></li>
 		  </ul>
-		  <p>Powered by codeblaze academy &copy; 2022</p>
+		  <p><small>Powered by codeblaze academy &copy; 2022</small></p>
 		 </footer>
 		</div>
 		);

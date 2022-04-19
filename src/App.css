@@ -131,7 +131,7 @@ text-align:center;
 
 
 
-/*HomePage...SR-ONLY*/
+/*HeaderPage...SR-ONLY*/
 .sr-only{
   display:none;
   position:absolute;
@@ -156,7 +156,7 @@ text-align:center;
 .menu-toggle:hover{
  color:#c00;
 }
-/*HomePageStyles...off-canvas style*/
+/*HeaderPageStyles...off-canvas style*/
 .navbar-menu{
   position:absolute;
   display:block;
@@ -185,7 +185,7 @@ text-align:center;
 }
 
 #navbar-menu:target{
-  transform:translateX(0);
+  transform:translateY(0);
 }
 #navbar-menu:target ul{
   position:relative;
@@ -220,21 +220,42 @@ text-align:center;
   list-style:none;
   padding:0;
   margin:0;
-  /*columns:2;
-*/
- display:flex;
+  columns:2;
+  text-align:center; 
+
+ /*display:flex;
  flex-flow:row wrap;
- gap:2rem;
+ gap:2rem;*/
 }
 .footer-section ul a{
   text-decoration:none;
+  font-size:1rem;
+  font-weight:bold;
+  font-family:aria,sans-serif;
+  color:#c00;
+
+}
+/*AboutPage Style*/
+.about-section{
+max-width:1200px;
+margin:2rem auto;
+min-height:250px;
+font-size:1.3rem;
+padding:1rem;
 }
 
 
 /*Media Queries for different screen sizes*/
+
+
 /*For Tablet device*/
 @media(min-width:410px){
 /*Header styles for tablet devices*/
+.home-wrapper .row p{
+  display:flex;
+  flex-flow:row wrap;
+  gap:0.5rem;
+}
 .nav-section nav ul li{
   flex-basis:40%;
   margin:0 auto;
@@ -247,6 +268,78 @@ text-align:center;
 color:var(--color6);
 background-color:var(--color1);
 }
+
+/*Footer styling*/
+.footer-section ul{
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  align-items:center;
+  max-width:1200px;
+  margin:2rem auto;
+}
+.footer-section ul a{
+  color:#383838;
+}
+
+
+/*ProductPage Styles*/
+.row{
+  flex-flow:row wrap;
+  justify-content:flex-start;
+  gap:0;
+}
+figure{
+  flex-basis:29%;
+  margin-bottom:0 0 1rem 0;
+}
+section{
+  margin:0 0 6rem 0;
+  padding:0;
+}
+section h2{
+  margin:1rem 0 0 0;
+  padding:0;
+  text-align:left;
+  color:var(--color9);
+
+}
+.card{
+  min-height:180px;
+}
+
+/*signUpPage styles*/
+
+
+}
+
+
+
+
+/*For desktop device*/
+@media(min-width:810px){
+
+/*Header styles for desktop device*/
+ .nav-section nav ul{
+  justify-content:flex-start;
+ } 
+.nav-section nav ul a{
+  background-color:transparent;
+  color:var(--color2);
+}
+.nav-section nav ul a:hover{
+background-color:transparent;
+}
+.nav-section nav ul li{
+  flex-basis:auto;
+  margin:0;
+}
+.nav-section nav ul li:first-child{
+  flex-basis:auto;
+  margin-right:auto;
+}
+
+/*Canvas styles Undo*/
 .navbar-menu,.menu-close,.menu-toggle{
   display:none;
 }
@@ -268,31 +361,28 @@ background-color:var(--color1);
 #navbar-menu:target + .backdrop{
   background:none;
 }
+
+/*Footer styling*/
+.footer-section ul{
+  justify-content: space-between;
+
+}
+.footer-section ul a{
+  font-weight:normal;
+  font-size:1.3rem;
 }
 
-
-
-
-/*For desktop device*/
-@media(min-width:720px){
-
-/*Header styles for desktop device*/
- .nav-section nav ul{
-  justify-content:flex-start;
- } 
-.nav-section nav ul a{
-  background-color:transparent;
-  color:var(--color2);
+/*Product Page styles*/
+figure{
+  flex-basis:18%;
+  margin-bottom:0 0 1rem 0;
 }
-.nav-section nav ul a:hover{
-background-color:transparent;
+.card{
+  min-height:250px;
 }
-.nav-section nav ul li{
-  flex-basis:auto;
-  margin:0;
-}
-.nav-section nav ul li:first-child{
-  flex-basis:auto;
-  margin-right:auto;
+
+/*signUpPage styles*/
+.signup-form-group{
+  max-width:400px;
 }
 }

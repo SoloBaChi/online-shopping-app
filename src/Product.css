@@ -1,0 +1,26 @@
+
+/*Production styling*/
+.row{
+	/*display:column;*/
+	text-align:left;
+	display:flex;
+	flex-flow:column;
+	justify-content:center;
+	gap:3rem;
+}
+.card{
+	min-height:250px;
+	border:1px solid #ece;
+	margin:0rem auto;
+	border-radius:15px;
+}
+.card:hover{
+	border:2px solid rgba(0,0,0,0.5);
+	transition:border 0.5s ease;
+}
+.action-button{
+margin:2rem 15px;
+}
+.show-typical{
+	color:#fff;
+}
