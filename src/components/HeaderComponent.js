@@ -22,7 +22,7 @@ const Header = () => {
               <li><NavLink to="/login">Login</NavLink></li>
               <li><NavLink to="/cart">Cart</NavLink></li>
               <li><NavLink to="/products">Products</NavLink></li>
-              <li><NavLink to="/aboutus">Aboutus</NavLink></li>
+              <li><NavLink to="/aboutus">About us</NavLink></li>
 		     </ul>
 		   </nav>
 		   <a href="#navbar-toggle" className="backdrop" hidden aria-hidden="true" tabIndex="-1"></a>

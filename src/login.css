@@ -1,5 +1,5 @@
 .login-form-group{
-	max-width:400px;
+	max-width:250px;
 	margin:5rem auto;
 	padding:1rem;
 	border:1px solid #ece;
@@ -18,7 +18,7 @@
 .login-form-group input{
  margin-bottom:2rem;
  padding:0.6rem;
- width:280px;
+ width:200px;
  box-shadow:none;
  border-radius:10px;
 }

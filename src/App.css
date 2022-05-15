@@ -37,9 +37,9 @@ border:0;
 h1,h2,h3{
   margin:0;
 }
-/*img{
-  width:50%;
-}*/
+img{
+width:100%;
+}
 
 
 
@@ -90,6 +90,7 @@ left:-0.5rem;
 /*Header Styles*/
 .header-wrapper{
   background-color:var(--color5);
+  padding:0.8rem;
 }
 .nav-section nav{
   max-width:1200px;
@@ -147,7 +148,7 @@ text-align:center;
   display:inline-block;
 }
 .menu-toggle,.menu-close{
-  font-size:1.3rem;
+  font-size:1.8rem;
   color:#333;
   padding:0.75px 15px;
   line-height:1.5;
@@ -156,6 +157,7 @@ text-align:center;
 .menu-toggle:hover{
  color:#c00;
 }
+
 /*HeaderPageStyles...off-canvas style*/
 .navbar-menu{
   position:absolute;
@@ -182,6 +184,7 @@ text-align:center;
  right:0;
  color:#fff;
  border:0px solid yellow;
+ /* padding-right:2rem; */
 }
 
 #navbar-menu:target{
@@ -214,6 +217,7 @@ text-align:center;
 
 /*Footer styles*/
 .footer-section{
+  margin-top:2rem;
   text-align:center;
 }
 .footer-section ul{
@@ -229,12 +233,13 @@ text-align:center;
 }
 .footer-section ul a{
   text-decoration:none;
-  font-size:1rem;
+  font-size:0.7rem;
   font-weight:bold;
   font-family:aria,sans-serif;
   color:#c00;
 
 }
+
 /*AboutPage Style*/
 .about-section{
 max-width:1200px;
@@ -273,7 +278,7 @@ background-color:var(--color1);
 .footer-section ul{
   display:flex;
   justify-content:center;
-  gap:2rem;
+  gap:1rem;
   align-items:center;
   max-width:1200px;
   margin:2rem auto;
@@ -298,7 +303,7 @@ section{
   padding:0;
 }
 section h2{
-  margin:1rem 0 0 0;
+  margin:2rem 0 0 2rem;
   padding:0;
   text-align:left;
   color:var(--color9);
@@ -318,7 +323,9 @@ section h2{
 
 /*For desktop device*/
 @media(min-width:810px){
-
+img{
+  width:50%;
+}
 /*Header styles for desktop device*/
  .nav-section nav ul{
   justify-content:flex-start;
@@ -363,26 +370,22 @@ background-color:transparent;
 }
 
 /*Footer styling*/
-.footer-section ul{
-  justify-content: space-between;
-
-}
 .footer-section ul a{
   font-weight:normal;
-  font-size:1.3rem;
+  font-size:1rem;
 }
 
 /*Product Page styles*/
 figure{
-  flex-basis:18%;
-  margin-bottom:0 0 1rem 0;
+  flex-basis:16%;
+  /* margin:0 0 1rem 0; */
 }
 .card{
   min-height:250px;
 }
 
 /*signUpPage styles*/
-.signup-form-group{
+.signup-form-group,.login-form-group{
   max-width:400px;
 }
 }

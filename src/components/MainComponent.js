@@ -1,4 +1,4 @@
-import React,{Component,useState} from 'react';
+import React,{Component} from 'react';
 import Header from './HeaderComponent';
 import Home from './HomeComponent';
 import UserLogin from './UserLoginComponent';
@@ -8,7 +8,10 @@ import Footer from './FooterComponent';
 import Products from './ProductComponent';
 import AboutUs from './AboutUsComponent';
 import {ITEMS} from '../shared/items';
+import { PRODUCTS } from '../shared/items';
 import {Switch, Route} from 'react-router-dom';
+
+
 
 class Main  extends Component{
 	constructor(props){
@@ -19,6 +22,11 @@ class Main  extends Component{
 	}
 
 render(){
+    
+	const ProductPage = () => {
+		return(<Products products={PRODUCTS}/>)
+	}
+
 	return(
 	<div className="main-wrapper">
 	<Header/>
@@ -26,7 +34,7 @@ render(){
 	<Route exact path="/">
 	{this.state.items.map(({id,...item})=>(<Home {...item} key={id}/>))}
 	</Route>
-	<Route path="/products" component={Products}/>
+	<Route path="/products" component={ProductPage}/>
 	<Route path="/aboutus" component ={AboutUs} />
 	<Route path="/login" component ={UserLogin}/>
 	<Route path="/signup" component={UserSignUp}/>

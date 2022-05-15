@@ -1,7 +1,7 @@
 import React from 'react';
 require('../Product.css');
 
-const Products = () => {
+const Products = (props) => {
 	return(
 		<React.Fragment>
 	 {/*Each section spans four colums*/}
@@ -11,7 +11,7 @@ const Products = () => {
 		<div className="row">
 		<figure>
 		  <div className="card">
-            
+            <p></p>
 		   </div>
 		   <figcaption>
 		   <button className="action-button" type="submit">Add to cart</button>
@@ -85,8 +85,21 @@ const Products = () => {
 	    {/*section 2*/}
 	    <section>
 	    <h2>Products in Stalk</h2>
-	    <div className="row">
-		<figure className="span-1">
+		<div className="row">
+		{props.products.map(productItem => (
+		 <figure key={productItem.id}>
+		 <div className="card">
+          <img src={productItem.image} alt={productItem.name}/>
+		  </div>
+		  <figcaption>
+		  <p>{productItem.description}</p>
+		  <button className="action-button" type="submit">{productItem.action}</button>
+		  </figcaption>
+		</figure>
+		))}
+	    
+		
+		 {/* <figure>
 		  <div className="card">
 
 		   </div>
@@ -101,23 +114,15 @@ const Products = () => {
 		   <figcaption>
 		   <button className="action-button" type="submit">Add to cart</button>
 		   </figcaption>
-		 </figure>
-		 <figure>
+		 </figure> */}
+		 {/* <figure>
 		  <div className="card">
 
 		   </div>
 		   <figcaption>
 		   <button className="action-button" type="submit">Add to cart</button>
 		   </figcaption>
-		 </figure>
-		 <figure>
-		  <div className="card">
-
-		   </div>
-		   <figcaption>
-		   <button className="action-button" type="submit">Add to cart</button>
-		   </figcaption>
-		 </figure>
+		 </figure> */}
 		 </div>
 		</section>
 	</React.Fragment>
